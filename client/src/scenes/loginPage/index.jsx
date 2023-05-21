@@ -1,8 +1,8 @@
-import { Box, Typography, useTheme, useMediaQuery } from '@mui/material'
-import Form from './Form'
+import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import Form from "./Form";
 const LoginPage = () => {
-  const theme = useTheme()
-  const isNoMobileScreens = useMediaQuery('(min-width:1000px)')
+  const theme = useTheme();
+  const isNoMobileScreens = useMediaQuery("(min-width:1000px)");
   return (
     <Box>
       <Box
@@ -17,19 +17,19 @@ const LoginPage = () => {
       </Box>
 
       <Box
-        width={isNoMobileScreens ? '50%' : '93%'}
+        width={isNoMobileScreens ? "50%" : "93%"}
         p="2rem"
         m="2rem auto"
         borderRadius="1.5rem"
         bgcolor={theme.palette.background.alt}
       >
-        <Typography fontWeight="500" variant="h5" sx={{ mb: '1.5rem' }}>
+        <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
           Welcome to Socipedia,the Social Media for Sociopaths!
         </Typography>
         <Form />
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

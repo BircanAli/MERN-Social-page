@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const UserSchema = new mongoose.Schema(
   {
@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       require: true,
-      min: 2,
+
       max: 50,
       unique: true,
     },
@@ -28,7 +28,7 @@ const UserSchema = new mongoose.Schema(
     },
     picturePath: {
       type: String,
-      default: '',
+      default: "",
     },
     friends: {
       type: Array,
@@ -36,11 +36,11 @@ const UserSchema = new mongoose.Schema(
     },
     location: String,
     occupation: String,
-    viewProfile: Number,
+    viewedProfile: Number,
     impressions: Number,
   },
   { timestamps: true }
-)
+);
 
-const User = mongoose.model('User', UserSchema)
-export default User
+const User = mongoose.model("User", UserSchema);
+export default User;
