@@ -1,13 +1,13 @@
 import {
+  ManageAccountsOutlined,
   EditOutlined,
   LocationOnOutlined,
   WorkOutlineOutlined,
-  ManageAccounts,
 } from '@mui/icons-material'
 import { Box, Typography, Divider, useTheme } from '@mui/material'
-import UserImage from 'scenes/components/UserImage'
-import FlexBetween from 'scenes/components/FlexBetween'
-import WidgetWrapper from 'scenes/components/WidgetWrapper'
+import UserImage from 'components/UserImage'
+import FlexBetween from 'components/FlexBetween'
+import WidgetWrapper from 'components/WidgetWrapper'
 import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -32,7 +32,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   useEffect(() => {
     getUser()
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   if (!user) {
     return null
@@ -64,7 +64,10 @@ const UserWidget = ({ userId, picturePath }) => {
               color={dark}
               fontWeight="500"
               sx={{
-                '&:hover': { color: palette.primary.light, cursor: 'pointer' },
+                '&:hover': {
+                  color: palette.primary.light,
+                  cursor: 'pointer',
+                },
               }}
             >
               {firstName} {lastName}
@@ -72,9 +75,11 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{friends.length} friends</Typography>
           </Box>
         </FlexBetween>
-        <ManageAccounts />
+        <ManageAccountsOutlined />
       </FlexBetween>
+
       <Divider />
+
       {/* SECOND ROW */}
       <Box p="1rem 0">
         <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
@@ -86,7 +91,9 @@ const UserWidget = ({ userId, picturePath }) => {
           <Typography color={medium}>{occupation}</Typography>
         </Box>
       </Box>
+
       <Divider />
+
       {/* THIRD ROW */}
       <Box p="1rem 0">
         <FlexBetween mb="0.5rem">
@@ -95,22 +102,25 @@ const UserWidget = ({ userId, picturePath }) => {
             {viewedProfile}
           </Typography>
         </FlexBetween>
-        <FlexBetween mb="0.5rem">
+        <FlexBetween>
           <Typography color={medium}>Impressions of your post</Typography>
           <Typography color={main} fontWeight="500">
             {impressions}
           </Typography>
         </FlexBetween>
       </Box>
+
       <Divider />
+
       {/* FOURTH ROW */}
       <Box p="1rem 0">
         <Typography fontSize="1rem" color={main} fontWeight="500" mb="1rem">
           Social Profiles
         </Typography>
+
         <FlexBetween gap="1rem" mb="0.5rem">
           <FlexBetween gap="1rem">
-            <img src="server/public/assets/twitter.png" alt="twitter" />
+            <img src="../assets/twitter.png" alt="twitter" />
             <Box>
               <Typography color={main} fontWeight="500">
                 Twitter
@@ -120,9 +130,10 @@ const UserWidget = ({ userId, picturePath }) => {
           </FlexBetween>
           <EditOutlined sx={{ color: main }} />
         </FlexBetween>
-        <FlexBetween gap="1rem" mb="0.5rem">
+
+        <FlexBetween gap="1rem">
           <FlexBetween gap="1rem">
-            <img src="server\public\assets\linkedin.png" alt="linkedin" />
+            <img src="../assets/linkedin.png" alt="linkedin" />
             <Box>
               <Typography color={main} fontWeight="500">
                 Linkedin
