@@ -2,6 +2,9 @@
 
 #### Sociopedia - similar to the facebook or any other social-media app
 
+email:testemail@gmail.com
+pass:secret123
+
 the back-end still is not deployed
 
 ## Features
