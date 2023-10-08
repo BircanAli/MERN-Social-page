@@ -1,4 +1,3 @@
-
 ## MERN STACK
 
 #### Sociopedia - similar to the facebook or any other social-media app
@@ -6,6 +5,7 @@
 the back-end still is not deployed
 
 ## Features
+
 - home page
 - login page
 - navbar
@@ -14,32 +14,25 @@ the back-end still is not deployed
 - friend list
 - my post
 
-
-
-
-
 ## 🛠 Skills
-HTML, CSS, JavaScript,React.js, MUI,
 
+HTML, CSS, JavaScript,React.js, MUI,
 
 ## Deployment
 
-To deploy this project
+To run this project
 
 ```bash
   Clone repository https://github.com/BircanAli/MERN-Social-page.git
 ```
 
 ```bash
-  npm install 
+  npm install
 ```
 
 ```bash
  npm run start
 ```
-
-
-
 
 ## Screenshots
 
